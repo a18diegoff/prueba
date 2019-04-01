@@ -1,0 +1,33 @@
+import java.util.Scanner;
+class Prueba {
+   static void Antolin(int x,int y,int z){
+       int i = y-z;
+       int a = 0;
+       if (y<z){
+           System.out.println("You must work harder!");
+       }
+       else {
+       while (x>i){
+           i+=y;
+           i-=z;
+           a++;
+        }
+           System.out.println(a);
+       }
+   }
+     
+   public static void main(String[] args) {
+           Scanner sc = new Scanner(System.in);
+           int x, y, z;
+           do {
+               x = sc.nextInt();
+               y = sc.nextInt();
+               z = sc.nextInt();
+               if (x==0 & y==0 & z==0){
+                   break;
+               }
+               Antolin(x,y,z);
+           }
+           while(x!=0 & y!=0 & z!=0);
+        }
+}
